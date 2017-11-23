@@ -32,6 +32,6 @@ Vue.component ('gallery', {
 var sample = new Vue ({
   el: '#example',
   data: {
-    pictures: [ 'assets/img/black_cat.jpg', 'assets/img/white_cat.jpg', 'assets/img/red_cat.jpg', 'assets/img/grey_cat.jpg', 'assets/img/strange_cat.jpg',]
+    pictures: [ 'assets/img/black_cat.jpg', 'assets/img/white_cat.jpg', 'assets/img/red_cat.jpg', 'assets/img/strange_cat.jpg',]
   }
 })
