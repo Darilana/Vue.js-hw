@@ -1,0 +1,38 @@
+body {
+	font-family: monospace;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.WhiteBg {
+	background-color: #FFFFFF;
+}
+
+.PurpleBg {
+	background-color: #d3d3d3;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+#app {
+	width: 30%;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 2rem;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 15px;
+	text-align: center;
+}
+
+button {
+	padding: 5px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: #800040;
+}

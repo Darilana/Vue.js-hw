@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id = 'app' v-bind:class="className" v-cloak>
+		<div>
+	  		<button @click = "changeBackground();">Change background color</button>
+		</div>
+		<h2>Sign up form</h2>
+		<form>
+			<div>
+				<label for="login-field">Username: </label>
+	            <input type="text" v-model="username" id="login-field">
+	        </div>
+	        <div>
+	        	<label for="password-field">Password: </label>
+	         	<input type="password" v-model="password" id="password-field">
+	         	<p>{{ answer }}</p>
+	        </div>
+	        <div class="input-group">
+	            <label>Yoour birth year: </label>
+	            <select name="selectOption" id="selectList">
+	            	<option disabled value=null selected="">...</option>
+	                <option v-for="year in yearsRange" v-bind:value="year"> {{ year }} </option>
+	            </select>
+	        </div>
+	        <div>
+	        	<label>Your sex: </label>
+	            <label><input type="radio" name="question1" value="Male">Male</label>
+	            <label><input type="radio" name="question1" value="Female" checked>Female</label>          
+	        </div>
+	        <div>
+	        <label>
+	            <input type="checkbox" checked>
+	            I want to receive information about sales and discounts
+	        </label>
+	        </div>
+	        <div>
+	        	<label>
+		        	<input type="checkbox" v-model="isCompanyAvailable">
+		          	I sign up on behalf of the company
+	          	</label>
+	        </div>
+	        <div v-show="isCompanyAvailable">
+				<label for="company">Your company name: </label>
+	            <input type="text" id="company">
+	        </div>
+	        <button v-bind:disabled="!(username && password)">Sign up</button>
+		</form>
+	</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

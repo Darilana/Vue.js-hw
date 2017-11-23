@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.container img {
+	width: 50%;
+	line-height: 0;
+	vertical-align: middle;
+}
+
+.container {
+	position: relative;
+	text-align: center;
+}
+
+button {
+	cursor: pointer;
+	font-size: 7rem;
+	border: none;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+button:hover{ 
+	opacity: 0.6;
+}
+
+button:focus {
+    outline:none;
+}
+
+
+
