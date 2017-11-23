@@ -44,7 +44,6 @@ var app = new Vue ( {
       "black cat": 'assets/img/black_cat.jpg',
       "white cat": 'assets/img/white_cat.jpg',
       "red cat": 'assets/img/red_cat.jpg',
-      "grey cat": 'assets/img/grey_cat.jpg',
       "strange cat": 'assets/img/strange_cat.jpg',
     },
     currentImg: '',
