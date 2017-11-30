@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js">
+      
+    </script>
+    
+  </head>
+
+  <body>
+    
+    <div id="app">
+      <button class="button-right" 
+              @click="showNextPicture">
+      </button>
+      
+      <main-component 
+          :picture="currentPicture"
+          :show-picture="currentVisible">
+        <p>{{currentCounterValue}}</p>
+      </main-component>
+<!--      <main-component
+          :picture="nextPicture"
+          :show-picture="!currentVisible">
+        <p>{{nextCounterValue}}</p>
+      </main-component> -->
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+
+</html>
