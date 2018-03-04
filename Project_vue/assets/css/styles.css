@@ -1,6 +1,6 @@
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -66,8 +66,8 @@ main {
 hr {
     border: 0;
     height: 2px;
-    width: 90%;   
- }
+    width: 90%;
+}
 
 .main-wrapper {
     min-height: 100vh;
@@ -81,20 +81,20 @@ hr {
 }
 
 #video-background {
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto; 
-  height: auto;
-  z-index: -100;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
 }
 
 .landing-container {
     text-align: center;
     font-size: 4rem;
-    padding: 20% 0;
+    padding: 10% 0;
     color: #FFFFFF;
 }
 
@@ -103,11 +103,11 @@ hr {
 }
 
 .fade-enter-active {
-  transition: opacity .5s;
+    transition: opacity .5s;
 }
 
 .fade-enter {
-  opacity: 0;
+    opacity: 0;
 }
 
 .nav-item {
@@ -125,8 +125,8 @@ hr {
 
 @media screen and (max-width: 680px){
 
-.landing-container.col.align-self-center > .landing-info {
-    font-size: 2rem;
+    .landing-container.col.align-self-center > .landing-info {
+        font-size: 2rem;
 
     }
 }

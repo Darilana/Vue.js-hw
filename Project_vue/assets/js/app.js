@@ -93,7 +93,6 @@ const Landing = {
     <div class="col align-self-center">
         <video playsinline autoplay muted loop id="video-background">
             <source src="assets/video/landing/cover.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="assets/video/landing/cover.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
         <div class="landing-container col align-self-center">
         <b-jumbotron header-level="4" header="Cheap Happiness" lead="Tour agency for you. Unforgettable journeys for affordable prices!" class="landing-info">
@@ -113,11 +112,29 @@ const Landing = {
 const aboutUs = {
     template: `<div class="card">
     <div class="card-body">
+       <gmap-map style="width: 100%; height: 500px; margin-bottom: 10px;"
+        :center="{lat: 1.38, lng: 103.8}"
+        :zoom="12"
+       >
+        <gmap-marker
+          :position="{lat: 1.38, lng: 103.8}""
+          :clickable="true"
+          :title="title"
+        ></gmap-marker>
+      </gmap-map>  
       <h4 class="card-title">About us</h4>
       <p class="card-text">We are travel agancy 'Cheap happiness'. Our company appeared in 1999 and was the first modern agency that organizes top class journeys. If you want to travel around the world safely and worry about nothing - contact 'Cheap Happiness' agency. Our team of processionals will organize the best trip for you!</p>
     </div>
-    <img class="card-img-bottom" src="assets/img/location.png" alt="Card image cap">
-  </div>`
+  </div>`,
+    data () {
+        return {
+            title: "We are here!"
+        }
+    },
+    components: {
+        'gmapMap': VueGoogleMaps.Map,
+        'gmapMarker': VueGoogleMaps.Marker
+    }
 };
 
 const contactUs = {
@@ -386,4 +403,11 @@ const app = new Vue ( {
               </my-footer>
             </div> `
 
-}).$mount('#app');  
+}).$mount('#app');
+
+
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyB7mvCqVEORmN9sP9xLPKsmag1yqbltU3E',
+    }
+});
